@@ -5,9 +5,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	// 序列号变量 可在布局中进行条件
+	// SerializeField 序列号变量 可在布局中进行条件
+	// 速度倍数
 	[SerializeField] private float speedmultiplier = 1.2345f;
-	private bool dead = false;
+	// 血条
+	[SerializeField] private float hpl = 10000f;
+	// 血量
+	private float hp = 10000f;
+	// 死亡状态
+	private bool dead = false; 
+	// 无敌状态
+	private bool invincible = false;
 
 	// Start is called before the first frame update
 	void Start()
@@ -54,5 +62,25 @@ public class Player : MonoBehaviour
 	private void Reset()
 	{
 		dead = false;
+		hp = hpl;
+	}
+
+	private void damage(float dam)
+	{
+		// 传来小于0 的值, 有错误
+		if (dam <= 0)
+			// to do 抛出错误
+			return;
+
+		// 无敌不扣血
+		if (invincible)
+			return;
+
+		hp = hp - dam;
+		if (hp < 0)
+		{
+			hp = 0;
+			dead = true;
+		}
 	}
 }
