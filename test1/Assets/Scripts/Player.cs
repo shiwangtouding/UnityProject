@@ -29,9 +29,8 @@ public class Player : MonoBehaviour
 	void Update()
 	{
 		if (!dead)
-		{
-			MoveStart()
-		}
+			MoveStart();
+
 		if (dead)
 			Debug.Log("dead: " + hp);
 		//if Math.Abs() .abs()
