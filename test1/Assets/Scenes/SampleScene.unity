@@ -155,8 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bc6b7bc3085ac4d8110d15bbdef7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0.12345
+  speedmultiplier: 3
   hpl: 10000
+  playerName: name
 --- !u!65 &478076090
 BoxCollider:
   m_ObjectHideFlags: 0
