@@ -17,11 +17,13 @@ public class Player : Physicsobject
     {
         //targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxRunSpeed, Input.GetAxis("Vertical") * maxJumpSpeed);
 		targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxRunSpeed, 0);
-        if (Input.GetButtonDown("Jump")){
+        if (Input.GetButtonDown("Jump") && grounded){
             velocity.y = maxJumpSpeed;
 
 		}
 
 
 	}
+	//2.25 x
+    //1.05 y
 }
