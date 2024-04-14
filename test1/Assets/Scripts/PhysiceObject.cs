@@ -12,7 +12,7 @@ public class Physicsobject : MonoBehaviour
 
 	public float minGroudNormalY = .65f;
 
-	public float gravityModifier = 1f;
+	public float gravityModifier = 2f;
 
 	protected Vector2 targetVelocity;
 
